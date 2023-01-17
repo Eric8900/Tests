@@ -1,0 +1,110 @@
+/* body {
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    background-image: url(Earth.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+.hide {
+    background-color: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    filter: blur(5px);
+     transform: translateX(-100%);
+    transition: all 5s;
+    transform: scale(10);
+}
+
+.show {
+    color: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transform: scaleY(1);
+}
+
+.earth {
+    width: 100%;
+    height: 100%;
+    background: url(Earth.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+body {
+    margin: 0;
+}
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:235vh;
+}
+
+.stars{
+  background:#000 url(stars2.png) repeat top center;
+  transform: translateZ(100%);
+  z-index:1;
+}
+
+.zoom {
+    color: #fff;
+    background:transparent url(twinkling.png) repeat top center;
+    z-index:2;
+    animation:move-twink-back 200s linear infinite;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1 {
+    background-color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(Earth3.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.afterzoom {
+    position: absolute;
+    height: 250vh;
+    width: 100%;
+    background: url(Earth3.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: auto;
+}
