@@ -53,33 +53,48 @@ div {
 body {
     margin: 0;
 }
+
+.hide {
+    background-color: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    color: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 @keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
 }
 
 .stars{
-  position: absolute;
+  position:absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
   width:100%;
-  height:235vh;
+  height: 232vh;
 }
 
-.stars{
-  background:#000 url(stars2.png) repeat top center;
-  transform: translateZ(100%);
-  z-index:1;
-}
-
-.zoom {
-    color: #fff;
+.zoom{
+    scale: 1;
     background:transparent url(twinkling.png) repeat top center;
     z-index:2;
     animation:move-twink-back 200s linear infinite;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: grid;
     place-items: center;
@@ -87,7 +102,12 @@ body {
     top: 0;
     left: 0;
 }
-h1 {
+.stars{
+    background:#000 url(stars2.png) repeat top center;
+    transform: translateZ(100%);
+    z-index:1;
+}
+.zoomh1 {
     background-color: #fff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -99,7 +119,7 @@ h1 {
 }
 .afterzoom {
     position: absolute;
-    height: 250vh;
+    height: 200vh;
     width: 100%;
     background: url(Earth3.webp);
     background-attachment: fixed;
@@ -108,3 +128,6 @@ h1 {
     background-size: cover;
     overflow-x: auto;
 }
+
+
+

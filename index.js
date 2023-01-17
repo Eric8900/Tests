@@ -11,7 +11,6 @@ const observer = new IntersectionObserver((entries) => {
 
 
 const elements = document.querySelectorAll('.hide');
-const curr = document.querySelector('.show');
 elements.forEach((e) => observer.observe(e));
 
 const zoomElement = document.querySelector('.zoom')
